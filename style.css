@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-attachment: fixed;
+    background-color: #256d11;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    padding: 2.5em 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Navbar */
+
+.menu{
+    position: sticky;
+    top: 1rem;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+li{
+    list-style-type: none;
+}
+
+nav a, .current{
+    text-decoration: none;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+nav a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #f1f1f1;
+    transition: 0.2s ease-in-out;
+}
+nav a:hover::after{
+    width: 100%;
+}
+
+/* Footer */
+
+footer{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    margin: auto;
+}
+
+
+footer a, .actuel{
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+footer ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+footer a:hover::after{
+    width: 100%;
+}
+
+/* Formulaire */
+
+.container{
+    margin: auto;
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+}
+.container header{
+    font-size: 40px;
+    color: #f1f1f1;
+    text-align: center;
+}
+.container .form{
+    margin-top: 30px;
+}
+.form .box, .message{
+    width: 100%;
+    margin-top: 20px;
+}
+.box label{
+    color: #f1f1f1;
+    font-size: 24px;
+}
+.form :where(.box input, .select-box, .message textarea){
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.box input:focus, .message textarea:focus{
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.message {
+    min-height: 120px;
+    width: 100%;
+    padding-top: 0.625rem;
+    resize: vertical;
+}
+.message label{
+    font-size: 24px;
+    color: #f1f1f1;
+}
+
+textarea{
+    font-family: 'Poppins';
+}
+
+/* Bouton Envoyer */
+
+.form button{
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all .2s ease;
+    background-color: #131416;
+}
+
+button a{
+    text-decoration: none;
+    color: #fff;
+}
+button:hover{
+    color: #131416;
+    background-color: #f1f1f1;
+}
+
+/* Responsive */
+
+@media screen and (max-width:1375px) {
+    footer{
+        padding-top: 5%;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #accueil{
+        padding-top: 15vh;
+        
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .menu{
+        position: initial;
+    }
+    ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+    h2{
+        padding: 3em 0 .5em 0;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    #cards{
+        display: flex;
+        justify-content: center;
+    }
+    .container{
+        margin-top: 10vh;
+    }
+}
+@media screen and (max-width:350px) {
+    #accueil h1{
+        flex-wrap: wrap;
+        flex: 300;
+    }
+}
