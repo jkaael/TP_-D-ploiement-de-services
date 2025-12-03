@@ -25,13 +25,13 @@ Rôles de l’équipe
 
 -[] Créer un formulaire de vote pour les photos
 
-h2 Développeur Créa
+## Développeur Créa
 
 -[] Créer le fichier CSS contenant les classes définies par le chef d’équipe
 
 -[] Trouver des photos d’oiseaux libres de droit pour illustrer le site
 
-h2 Hébergeur
+## Hébergeur
 
 -[] Héberger le site en local pour les tests
 
@@ -41,7 +41,7 @@ h2 Hébergeur
 
 -[] (Optionnel) Créer la base de données sur l’hébergeur distant
 
-h1 Instructions générales
+# Instructions générales
 
 -[] Lire attentivement l’ensemble des consignes avant de commencer
 
@@ -50,6 +50,3 @@ h1 Instructions générales
 -[] Communiquer exclusivement via GitHub pour simuler un travail à distance
 
 
- Renseigner votre pseudo GitHub sur le Google Sheet fourni sur Eprel
-
- Vérifier que chaque chef d’équipe a accès aux pseudos de son groupe
