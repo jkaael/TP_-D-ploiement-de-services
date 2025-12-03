@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concoours photo</title>
+    <title>Concours photo</title>
 </head>
 <body>
     <main class="section-concours">
