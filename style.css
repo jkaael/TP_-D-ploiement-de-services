@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -11,22 +10,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f2f8f3; /* vert très clair */
-    color: #2f3d2e; /* vert foncé naturel */
+    background: #f2f8f3;
+    color: #2f3d2e;
     line-height: 1.6;
-}
-
-
-h1{
-    font-family: 'Times New Roman', Times, serif;
-    color: #f1f1f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3em;
-    padding: 2.5em 0;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
 /* Navbar */
@@ -47,9 +33,9 @@ li{
     list-style-type: none;
 }
 
-nav a, .current{
+nav a{
     text-decoration: none;
-    color: #f1f1f1;
+    color: #333;
     text-transform: uppercase;
     font-size: 1.5em;
 }
@@ -59,7 +45,7 @@ nav a::after{
     display: block;
     width: 0%;
     height: 2px;
-    background: #f1f1f1;
+    background: #333;
     transition: 0.2s ease-in-out;
 }
 nav a:hover::after{
@@ -79,7 +65,7 @@ footer{
 
 footer a, .actuel{
     text-decoration: none;
-    color: #f1f1f1;
+    color: #333;
 }
 
 footer ul{
@@ -146,6 +132,150 @@ h3 {
     transition: 0.3s;
 }
 
+/* Trombinoscope */
+
+.container2{
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.card h3{
+    font-size: 1.5rem;
+    color: #d3bce9;
+    margin-bottom: 10px;
+}
+.card figure{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 4px solid #a76ebc;
+    box-shadow: 0 0 10px #a76ebc55;
+}
+
+.cardMMI img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cardMMI{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #3b3b3b, #2d2d2d);
+    border: 1px solid #5a3d5c;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(167, 110, 188, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    z-index: 3;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(163, 130, 170, 0.35);
+    transition: .4s;
+}
+
+.cardMMI.active{
+    display: flex;
+    animation: fade 0.8s;
+}
+
+.cardMMI::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/fleurs/pattern_fleur.png') no-repeat;
+    border-radius: 20px;
+    background-size: fill;
+    opacity: 0.07;
+    z-index: 0;
+}
+
+.cardMMI span.poste {
+    background-color: #efd7f5;
+    color: #5b3b5f;
+    border-radius: 25px;
+    padding: 8px 16px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: background-color .3s;
+    position: relative;
+    z-index: 1;
+}
+
+.cardMMI span.poste:hover{
+    background-color: #9961a081;
+    color: #f1f1f1;
+}
+
+
+.cardMMI {
+    min-width: 250px;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cont-btn {
+    width: 100%;
+    height: auto;
+    background-color: #f1f1f1;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(145deg, #3b3b3b, #2d2d2d);
+    border: 1px solid #5a3d5c;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+
+}
+img{
+    height: 100%;
+}
+
+#right, #left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee5;
+    border: 1px solid #eee8;
+    color: #eee;
+    font-size: x-large;
+    font-family: monospace;
+    z-index: 15;
+}
+
+#left{
+    left: 3%;
+}
+
+#right{
+    right: 3%;
+}
 
 /* Formulaire */
 
@@ -160,7 +290,7 @@ h3 {
 }
 .container header{
     font-size: 40px;
-    color: #f1f1f1;
+    color: #333;
     text-align: center;
 }
 .container .formulaire-photo{
@@ -171,7 +301,7 @@ h3 {
     margin-top: 20px;
 }
 .box label{
-    color: #f1f1f1;
+    color: #333;
     font-size: 24px;
 }
 .formulaire-photo :where(.box input, .select-box, .message textarea){
@@ -197,7 +327,7 @@ h3 {
 }
 .message label{
     font-size: 24px;
-    color: #f1f1f1;
+    color: #333;
 }
 
 textarea{
@@ -225,7 +355,7 @@ button a{
 }
 button:hover{
     color: #131416;
-    background-color: #f1f1f1;
+    background-color: #333;
 }
 
 /* Responsive */
