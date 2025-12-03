@@ -1,6 +1,11 @@
 # TP_Déploiement-de-services
 
-Site du concours photo – Espace Naturel de la Motte
+# Instruction pour les membres 120
+
+Objectif: Créer un site internet pour un concours de photos ornithologiques dont le sujet est l’espace naturel de la motte.
+
+### Site du concours photo – Espace Naturel de la Motte
+
 Rôles de l’équipe
 
 ## Chef d’équipe
@@ -28,6 +33,25 @@ Rôles de l’équipe
 ## Développeur Créa
 
 - [ ] Créer le fichier CSS contenant les classes définies par le chef d’équipe
+
+### Classes CSS obligatoires (à utiliser par toute l’équipe)
+
+`container-principal`
+
+`header-site`
+
+`section-accueil`
+
+`section-concours`
+
+`carte-oiseau`
+
+`formulaire-photo`
+
+`formulaire-vote`
+
+`bouton-principal`   
+
 
 - [ ] Trouver des photos d’oiseaux libres de droit pour illustrer le site
 
