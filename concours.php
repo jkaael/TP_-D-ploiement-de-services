@@ -9,10 +9,22 @@
     <main class="section-concours">
     <h1>Concours de photos</h1>
     <a href="index.html">Retour à la page d'accueil</a>
-
+        <?php
+        $i = 0;
+        foreach ($oiseaux as $oiseau): ?>
+                    <div class="cardMMI <?= $i === 0 ? 'active' : '' ?>">
+                      <h3><?= $oiseau['prenom'] ?>&nbsp;<?= $memboiseaureMMI['nom'] ?></h3>
+                      <figure>
+                        <?php
+                          $photo = 'public/images/equipe/' . $oiseau['photo_url'];
+                        ?>
+                        <img src="<?= $photo?>" alt="photo de <?= $oiseau['prenom'] ?> <?= $oiseau['nom'] ?>" />
+                      </figure>
+                    </div>
+        <?php $i++; endforeach ?>
     <section class="container">
         <header>Formulaire de contact</header>
-        <form class="form">
+        <form class="formulaire-photo">
             <div class="box">
                 <label>Nom</label>
                 <input type="text" placeholder="Entrez votre nom" required />
