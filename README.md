@@ -1,8 +1,8 @@
 # TP_Déploiement-de-services
 
-#Instruction pour les membres 120
+# Instruction pour les membres 120
 
-###Site du concours photo – Espace Naturel de la Motte
+### Site du concours photo – Espace Naturel de la Motte
 Rôles de l’équipe
 
 ## Chef d’équipe
