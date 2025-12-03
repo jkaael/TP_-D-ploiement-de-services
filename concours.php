@@ -12,16 +12,20 @@
         <?php
         $i = 0;
         foreach ($oiseaux as $oiseau): ?>
-                    <div class="cardMMI <?= $i === 0 ? 'active' : '' ?>">
-                      <h3><?= $oiseau['prenom'] ?>&nbsp;<?= $memboiseaureMMI['nom'] ?></h3>
+                    <div class="card <?= $i === 0 ? 'active' : '' ?>">
+                      <h3>C'est un bô zoiseau, non ?</h3>
                       <figure>
                         <?php
-                          $photo = 'public/images/equipe/' . $oiseau['photo_url'];
+                          $photo = 'uploads/' . $oiseau['adresse_fichier'];
                         ?>
-                        <img src="<?= $photo?>" alt="photo de <?= $oiseau['prenom'] ?> <?= $oiseau['nom'] ?>" />
+                        <img src="<?= $photo?>" alt="photo de zoiseau" />
                       </figure>
                     </div>
         <?php $i++; endforeach ?>
+        </div>
+                       <button id="left" class="btn-nav"><</button>
+                        <button id="right" class="btn-nav">></button>
+        </div>
     <section class="container">
         <header>Formulaire de contact</header>
         <form class="formulaire-photo">
@@ -42,4 +46,47 @@
     </section>
     </main>
 </body>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cardsMMI = document.querySelectorAll('.card');
+
+
+if (cardsMMI.length > 0) {
+let indexMMI = 0;
+
+if (rightMMI && leftMMI) {
+document.getElementById('right').addEventListener('click', () => {
+    slideSuivante(cardsMMI, 'MMI');
+});
+
+document.getElementById('left').addEventListener('click', () => {
+    slidePrecedente(cardsMMI, 'MMI');
+});
+}
+
+function slideSuivante(cards, group) {
+        cards[indexMMI].classList.remove('active');
+        indexMMI = (indexMMI + 1) % cards.length;
+        cards[indexMMI].classList.add('active');
+}
+
+function slidePrecedente(cards, group) {
+        cards[indexMMI].classList.remove('active');
+        indexMMI = (indexMMI - 1 + cards.length) % cards.length;
+        cards[indexMMI].classList.add('active');
+}
+
+function keyPress(e){
+    if(e.keyCode === 39){
+       slideSuivante(cardsMMI, 'MMI');
+        slideSuivante(cardsGB, 'GB');
+    } else if(e.keyCode === 37){
+        slidePrecedente(cardsMMI, 'MMI');
+        slidePrecedente(cardsGB, 'GB');
+    }
+}
+document.addEventListener('keydown', keyPress)
+}
+});</script>
 </html>
