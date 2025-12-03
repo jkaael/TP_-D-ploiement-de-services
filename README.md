@@ -34,6 +34,24 @@ Rôles de l’équipe
 
 - [ ] Créer le fichier CSS contenant les classes définies par le chef d’équipe
 
+      ** Classes CSS obligatoires (à utiliser par toute l’équipe) **
+
+container-principal
+
+header-site
+
+section-accueil
+
+section-concours
+
+carte-oiseau
+
+formulaire-photo
+
+formulaire-vote
+
+bouton-principal 
+
 - [ ] Trouver des photos d’oiseaux libres de droit pour illustrer le site
 
 ## Hébergeur
