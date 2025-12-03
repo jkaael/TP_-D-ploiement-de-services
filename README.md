@@ -3,17 +3,17 @@
 Site du concours photo – Espace Naturel de la Motte
 Rôles de l’équipe
 
-h2 Chef d’équipe
+## Chef d’équipe
 
--[] Initialiser le dépôt GitHub et inviter les membres de l’équipe
+-[ ] Initialiser le dépôt GitHub et inviter les membres de l’équipe
 
- -[] Créer le fichier README.md contenant les instructions du projet
+ -[ ] Créer le fichier README.md contenant les instructions du projet
 
- -[] Définir les noms des classes CSS obligatoires
+ -[ ] Définir les noms des classes CSS obligatoires
 
  -[] Vérifier et accepter les pull requests envoyées par les autres membres
 
-h2 Développeur principal
+## Développeur principal
 
 -[] Créer une page HTML d’accueil
 
