@@ -2,7 +2,10 @@
 
 # Instruction pour les membres 120
 
+Objectif: Créer un site internet pour un concours de photos ornithologiques dont le sujet est l’espace naturel de la motte.
+
 ### Site du concours photo – Espace Naturel de la Motte
+
 Rôles de l’équipe
 
 ## Chef d’équipe
