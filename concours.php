@@ -48,7 +48,7 @@ require_once 'connect.php' ?>
     </section>
     </main>
 </body>
-<script>
+<!-- <script>
 
 document.addEventListener('DOMContentLoaded', () => {
     const cardsMMI = document.querySelectorAll('.card');
@@ -90,5 +90,5 @@ function keyPress(e){
 }
 document.addEventListener('keydown', keyPress)
 }
-});</script>
+});</script> -->
 </html>
