@@ -9,9 +9,19 @@ require_once 'connect.php' ?>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <header class="header-site">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="concours.php">Concours</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <main id="section-concours">
     <h1>Concours de photos</h1>
-    <a href="index.html">Retour à la page d'accueil</a>
+    <a href="index.html" class="retour">Retour à la page d'accueil</a>
 
     <section id="galerie">
                 <div class="carte-oiseau"><img src="uploads/IMG_6324.JPEG" alt="Zoiseau"></div>
