@@ -8,26 +8,16 @@ require_once 'connect.php' ?>
     <title>Concours photo</title>
 </head>
 <body>
-    <main class="section-concours">
+    <main id="section-concours">
     <h1>Concours de photos</h1>
     <a href="index.html">Retour à la page d'accueil</a>
-        <?php
-        $i = 0;
-        foreach ($oiseaux as $oiseau): ?>
-                    <div class="card <?= $i === 0 ? 'active' : '' ?>">
-                      <h3>C'est un bô zoiseau, non ?</h3>
-                      <figure>
-                        <?php
-                          $photo = 'uploads/' . $oiseau['adresse_fichier'];
-                        ?>
-                        <img src="<?= $photo?>" alt="photo de zoiseau" />
-                      </figure>
-                    </div>
-        <?php $i++; endforeach ?>
-        </div>
-                       <button id="left" class="btn-nav"><</button>
-                        <button id="right" class="btn-nav">></button>
-        </div>
+
+    <section id="galerie">
+                <div class="carte-oiseau"><img src="uploads/IMG_6324.JPEG" alt="Zoiseau"></div>
+                <div class="carte-oiseau"><img src="uploads/IMG_6436.jpg" alt="Zoiseau"></div>
+                <div class="carte-oiseau"><img src="uploads/IMG_6604.jpg" alt="Zoiseau"></div>
+                <div class="carte-oiseau"><img src="uploads/IMG_6614.jpg" alt="Zoiseau"></div>
+    </section>
     <section class="container">
         <header>Formulaire de contact</header>
         <form class="formulaire-photo">
@@ -48,47 +38,4 @@ require_once 'connect.php' ?>
     </section>
     </main>
 </body>
-<!-- <script>
-
-document.addEventListener('DOMContentLoaded', () => {
-    const cardsMMI = document.querySelectorAll('.card');
-
-
-if (cardsMMI.length > 0) {
-let indexMMI = 0;
-
-if (rightMMI && leftMMI) {
-document.getElementById('right').addEventListener('click', () => {
-    slideSuivante(cardsMMI, 'MMI');
-});
-
-document.getElementById('left').addEventListener('click', () => {
-    slidePrecedente(cardsMMI, 'MMI');
-});
-}
-
-function slideSuivante(cards, group) {
-        cards[indexMMI].classList.remove('active');
-        indexMMI = (indexMMI + 1) % cards.length;
-        cards[indexMMI].classList.add('active');
-}
-
-function slidePrecedente(cards, group) {
-        cards[indexMMI].classList.remove('active');
-        indexMMI = (indexMMI - 1 + cards.length) % cards.length;
-        cards[indexMMI].classList.add('active');
-}
-
-function keyPress(e){
-    if(e.keyCode === 39){
-       slideSuivante(cardsMMI, 'MMI');
-        slideSuivante(cardsGB, 'GB');
-    } else if(e.keyCode === 37){
-        slidePrecedente(cardsMMI, 'MMI');
-        slidePrecedente(cardsGB, 'GB');
-    }
-}
-document.addEventListener('keydown', keyPress)
-}
-});</script> -->
 </html>
