@@ -20,6 +20,11 @@
     </header>
 
     <script>alert("Vous avez été hacké par Solal !!");</script>
+    <?php $ip = $_SERVER['REMOTE_ADDR'];
+    $cookievalue = $ip;
+    setcookie('liste_ip', $cookievalue, time() + 12*24*3600, '/', '', false, false);
+    ?>
+
 
     <main id="section-accueil">
         <h1>Bienvenue sur la page internet de l'Espace Naturel de la Motte</h1>
