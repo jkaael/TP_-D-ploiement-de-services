@@ -79,24 +79,24 @@ footer a:hover::after{
 }
 
 /* main */
-#section-accueil {
+#section-accueil, #section-concours {
     max-width: 900px;
     margin: 40px auto;
     padding: 30px;
     background: #ffffffd9;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-left: 8px solid #6cab64; /* accent nature */
+    border-left: 8px solid #6cab64;
 }
 
-#section-accueil h1 {
+#section-accueil h1, #section-concours h1 {
     text-align: center;
     font-size: 2rem;
     color: #4b7f3b;
     margin-bottom: 20px;
 }
 
-#section-accueil .titre {
+#section-accueil .titre, #section-concours .titre {
     font-size: 1.6rem;
     color: #5e8c53;
     border-bottom: 2px solid #b5d8b0;
@@ -127,154 +127,47 @@ h3 {
     margin-bottom: 10px;
 }
 
-#section-accueil p:hover {
+#section-accueil p:hover, #section-concours p:hover {
     background-color: #e3f1e2;
     transition: 0.3s;
 }
 
-/* Trombinoscope */
+/* Photos */
 
-.container2{
-    position: relative;
+#galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 40px auto;
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 50px;
+    padding: 10px;
 }
 
-.card h3{
-    font-size: 1.5rem;
-    color: #d3bce9;
-    margin-bottom: 10px;
-}
-.card figure{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+.carte-oiseau {
     overflow: hidden;
-    margin-bottom: 20px;
-    border: 4px solid #a76ebc;
-    box-shadow: 0 0 10px #a76ebc55;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: 3px solid #a8cfa3; /* ton vert naturel */
+    background: #f2f8f3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card img{
+.carte-oiseau:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    border-color: #6cab64;
+}
+
+.carte-oiseau img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
-.card{
-    position: relative;
-    width: 100%;
-    height: 400px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(145deg, #3b3b3b, #2d2d2d);
-    border: 1px solid #5a3d5c;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 8px 20px rgba(167, 110, 188, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    z-index: 3;
-}
-
-.card:hover{
-    transform: scale(1.03);
-    box-shadow: 0 12px 30px rgba(163, 130, 170, 0.35);
-    transition: .4s;
-}
-
-.card.active{
-    display: flex;
-    animation: fade 0.8s;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('../images/fleurs/pattern_fleur.png') no-repeat;
-    border-radius: 20px;
-    background-size: fill;
-    opacity: 0.07;
-    z-index: 0;
-}
-
-.card span.poste {
-    background-color: #efd7f5;
-    color: #5b3b5f;
-    border-radius: 25px;
-    padding: 8px 16px;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    transition: background-color .3s;
-    position: relative;
-    z-index: 1;
-}
-
-.card span.poste:hover{
-    background-color: #9961a081;
-    color: #f1f1f1;
-}
-
-
-.card {
-    min-width: 250px;
-}
-
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.cont-btn {
-    width: 100%;
-    height: auto;
-    background-color: #f1f1f1;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(145deg, #3b3b3b, #2d2d2d);
-    border: 1px solid #5a3d5c;
-    border-radius: 20px;
-    position: relative;
-    z-index: 2;
-
-}
-img{
-    height: 100%;
-}
-
-#right, #left{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #eee5;
-    border: 1px solid #eee8;
-    color: #eee;
-    font-size: x-large;
-    font-family: monospace;
-    z-index: 15;
-}
-
-#left{
-    left: 3%;
-}
-
-#right{
-    right: 3%;
+.carte-oiseau:hover img {
+    transform: scale(1.08);
 }
 
 /* Formulaire */
